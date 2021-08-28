@@ -3,11 +3,7 @@ from client import Client
 import time
 from threading import Thread
 
-name = input()
-c1 = Client(name)
-
-
-
+c1 = Client("lohith")
 def update_messages():
     """
     updates the local list of messages
@@ -28,15 +24,21 @@ def update_messages():
                 break
 
 
-Thread(target=update_messages).start()
-
-
 def start():
+
     connected = True
     while connected:
-        msg = input('')
+        msg = input()
         if msg == 'quit':
             c1.disconnect()
             connected = False
         else:
             c1.send_msg(msg)
+
+if __name__ == "__main__":
+    name = input()
+    c1 = Client(name)
+    start()
+    Thread(target=update_messages).start()
+
+

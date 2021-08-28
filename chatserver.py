@@ -3,8 +3,8 @@ from threading import Thread
 import time
 from person import Person
 
-HOST = '172.23.192.1'  # host name
-PORT = 1010  # port number
+HOST = '192.168.0.89'  # host name
+PORT = 8080  # port number
 BUFF_SIZE = 512  # max size of the message
 MAX_CONNECTIONS = 10  # max no.of connections
 persons = []  # list to maintain the persons in the chat

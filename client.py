@@ -4,8 +4,8 @@ import time
 
 
 class Client:
-    HOST = '172.23.192.1'
-    PORT = 1010
+    HOST = '192.168.0.89'
+    PORT = 8080
     ADDR = (HOST, PORT)
     BUFF_SIZE = 512
 
